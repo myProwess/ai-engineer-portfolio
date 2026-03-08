@@ -31,6 +31,10 @@ const skillIcons = {
     'Openshift': '🔴',
     'Testrail': '🛤️',
     'MySQL': '🐬',
+    'Typescript': '🔷',
+    'Playwright': '🎭',
+    'Visual Studio Code': '💻',
+    'GitHub': '🐙',
 };
 
 function Skills({ data }) {

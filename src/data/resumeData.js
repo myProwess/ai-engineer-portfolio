@@ -20,18 +20,18 @@ const resumeData = {
         completed_projects: "6+",
         hours_worked: "15K+"
     },
-    about_statement: "I believe in delivering quality automation solutions, ensuring that every project I work on meets the highest standards of reliability and performance.",
+    about_statement: "I believe in delivering Quality Automation Solutions, ensuring that every project I work on meets the highest standards of reliability and performance.",
     professional_summary: "Around 9+ years of overall experience in all facets of Automation Development and Testing. Experienced with Test Automation tools like Selenium, TestNG, BDD, Teamcity, Jenkins. Have experience with Perfecto Mobile Functional & Test Automation, and Certification with TOSCA Test Suite. Working experience in Agile Team with In-sprint automation. Good knowledge in Core Java, API and microservices Testing. Hands on experience on GIT, JIRA, Jenkins. Experience working on CI/CD platform integration.",
     skills: {
-        languages: ["Core Java", "SQL", "HTML", "CSS"],
+        languages: ["Core Java", "Typescript", "SQL", "HTML", "CSS"],
         frameworks_and_libraries: [
-            "Selenium", "TestNG", "BDD", "Cucumber", "POM",
+            "Selenium", "Playwright", "TestNG", "BDD", "Cucumber", "POM",
             "Hybrid Framework", "REST API", "Bootstrap", "SOAPUI"
         ],
         tools_and_platforms: [
-            "Jenkins", "TeamCity", "Eclipse", "IntelliJ", "UFT",
+            "Jenkins", "Visual Studio Code", "TeamCity", "Eclipse", "IntelliJ", "UFT",
             "Perfecto Mobile", "TOSCA", "HP ALM", "JIRA", "RALLY",
-            "GIT", "BonoboGit", "Openshift", "Testrail", "MySQL"
+            "GIT", "GitHub", "Openshift", "Testrail", "MySQL"
         ]
     },
     work_experience: [
