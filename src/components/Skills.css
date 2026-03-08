@@ -1,0 +1,115 @@
+/* Skills Section Styles */
+.skills {
+    background: var(--lavender);
+    padding: var(--section-padding);
+}
+
+.skills-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skills-category-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-dark);
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 16px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+    width: 100%;
+    max-width: 140px;
+    aspect-ratio: 1;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: transform var(--transition-med), box-shadow var(--transition-med);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(74, 144, 217, 0.05), rgba(74, 144, 217, 0.15));
+    opacity: 0;
+    transition: opacity var(--transition-med);
+    border-radius: 14px;
+}
+
+.skill-item:hover {
+    transform: translateY(-6px) perspective(600px) rotateX(5deg);
+    box-shadow: 0 12px 30px rgba(74, 144, 217, 0.2);
+}
+
+.skill-item:hover::before {
+    opacity: 1;
+}
+
+.skill-icon {
+    font-size: 2.2rem;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .skills-categories {
+        gap: 40px;
+    }
+
+    .skills-category-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .skill-item {
+        padding: 16px 12px;
+    }
+}

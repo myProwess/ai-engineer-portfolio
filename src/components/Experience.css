@@ -1,0 +1,221 @@
+/* Experience Section Styles */
+.experience {
+    background: var(--navy-deep);
+    padding: var(--section-padding);
+    position: relative;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, var(--lavender), var(--navy-deep));
+    pointer-events: none;
+}
+
+.experience::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to top, var(--lavender), var(--navy-deep));
+    pointer-events: none;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 3px;
+    height: 100%;
+    background: var(--timeline-line);
+    border-radius: 2px;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Icon */
+.timeline-icon {
+    position: absolute;
+    left: 14px;
+    top: 0;
+    width: 34px;
+    height: 34px;
+    background: var(--navy-deep);
+    border: 3px solid var(--timeline-line);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.timeline-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--timeline-line);
+}
+
+/* Timeline Card */
+.timeline-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 24px 28px;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-med), box-shadow var(--transition-med);
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--card-bg);
+}
+
+.timeline-position {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 2px;
+}
+
+.timeline-company {
+    font-size: 0.95rem;
+    color: var(--accent-blue);
+    font-weight: 500;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.timeline-description {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.timeline-description li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 4px;
+}
+
+.timeline-description li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-weight: 700;
+}
+
+.timeline-date {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-body);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Desktop alternate timeline */
+@media (min-width: 769px) {
+    .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        width: 50%;
+        padding-left: 0;
+    }
+
+    .timeline-item:nth-child(odd) {
+        padding-right: 50px;
+        text-align: right;
+        margin-left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        padding-left: 50px;
+        margin-left: 50%;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-icon {
+        left: auto;
+        right: -17px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-icon {
+        left: -17px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-card::before {
+        left: auto;
+        right: -10px;
+        border-right: none;
+        border-left: 10px solid var(--card-bg);
+    }
+
+    .timeline-item:nth-child(even) .timeline-card::before {
+        left: -10px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+    }
+
+    .timeline-icon {
+        left: 4px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .timeline-card {
+        padding: 18px 20px;
+    }
+
+    .timeline-position {
+        font-size: 1.1rem;
+    }
+}
