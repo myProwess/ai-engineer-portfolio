@@ -27,8 +27,13 @@ function Certifications({ data }) {
     if (data.personal_info.links.github) {
         data.personal_info.links.github.forEach((url, idx) => {
             const repoName = url.split('/').filter(Boolean).pop().replace('.git', '').replace(/-/g, ' ');
+
+            let displayTitle = repoName.charAt(0).toUpperCase() + repoName.slice(1);
+            if (url.includes('ai-gold-price-tracker')) displayTitle = 'AI Gold Price Tracker';
+            if (url.includes('ai-importance-app')) displayTitle = 'Importance of AI';
+
             cards.push({
-                title: repoName.charAt(0).toUpperCase() + repoName.slice(1),
+                title: displayTitle,
                 description: `Open source project hosted on GitHub`,
                 icon: '💻',
                 tags: ['GitHub', 'Open Source'],
